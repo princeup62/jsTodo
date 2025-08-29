@@ -13,13 +13,46 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="deleteModal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete this todo?</p>
+        <button id="confirmDelete" class="btn btn-danger mb-2">Yes</button>
+        <button id="cancelDelete" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <div id="edit-modal" class="edit-modal">
+      <div class="modal-content">
+        <p>Edit Todo</p>
+         <form id="edit-form">
+          <input
+            class="form-control"
+            type="text"
+            id="edit-todo"
+            name="edit-todo"
+            placeholder="Edit Task"
+          />
+
+          <div class="d-flex justify-content-left mt-3">
+            <button class="btn btn-primary mx-left">Edit Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="loader" class="loader">
+      <div class="modal-content">
+        <h2>Loading....</h2>
+      </div>
+    </div>
+
     <div
       class="parent-wrapper d-flex justify-content-center align-items-center"
     >
       <div class="child-wrapper text-center">
         <h1>To Do List</h1>
 
-        <form>
+        <form id="add-form">
           <input
             class="form-control"
             type="text"
